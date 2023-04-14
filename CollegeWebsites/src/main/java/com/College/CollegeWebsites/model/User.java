@@ -1,16 +1,25 @@
 package com.College.CollegeWebsites.model;
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name="users")
-public class user {
+public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private String username;
     private String password;
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
+    }
+
+    private String profile;
     private String firstName;
     private String lastName;
     private String email;
